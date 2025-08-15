@@ -2,7 +2,7 @@
 
 .project-card {
   user-select: none;
-  overflow: visible; 
+   
   width: 380px;
   height: 540px;
   background-color: rgba(51, 51, 51, 1);
