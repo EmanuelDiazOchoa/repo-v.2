@@ -3,15 +3,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import MySwiper from "../components/MySwiper.jsx";
 ---
 <BaseLayout title="Hector Emanuel Diaz Ochoa - Desarrollador Front End y Desarrollador de Aplicaciones Móviles">
-  <!-- main ocupa todo el alto disponible; padding-b para que no lo tape el footer fijo -->
+  
   <main class="relative h-full pb-24">
-    <!-- Banda de fondo para “Proyectos” (mitad inferior) -->
+    
     <div class="absolute inset-x-0 bottom-24 top-[42%] bg-[#15233a]/85 rounded-t-2xl -z-10"></div>
 
-    <!-- Contenedor central -->
+    
     <div class="h-full max-w-[1280px] mx-auto px-6 pt-6 grid grid-rows-[auto_1fr] gap-4">
 
-      <!-- FILA 1: título + subtítulo (centrados) -->
+      
       <div class="text-center">
         <h1 id="main-title" class="text-4xl md:text-5xl font-extrabold">
           Hola, soy Hector Emanuel Diaz Ochoa
@@ -21,9 +21,9 @@ import MySwiper from "../components/MySwiper.jsx";
         </h2>
       </div>
 
-      <!-- FILA 2: 3 columnas -> izq: foto+CV | centro: sobre mí | der: carrusel -->
+      
       <div class="grid grid-cols-1 md:grid-cols-3 gap- items-center">
-        <!-- Columna IZQ: Foto + botón -->
+        
         <div class="flex flex-col items-center">
           <img src="/img/Foto-mia-2.jpg" alt="Foto de Hector"
                class="w-48 h-64 md:w-56 md:h-72 object-cover rounded-md shadow-lg border border-gray-300" />
@@ -33,7 +33,7 @@ import MySwiper from "../components/MySwiper.jsx";
           </a>
         </div>
 
-        <!-- Columna CENTRO: Sobre mí -->
+        
         <div class="text-center md:px-4">
           <h3 class="text-2xl font-bold mb-3">Sobre Mí</h3>
           <p class="text-sm md:text-base text-gray-700 dark:text-gray-300 leading-relaxed max-w-[520px] mx-auto">
@@ -43,7 +43,7 @@ import MySwiper from "../components/MySwiper.jsx";
           </p>
         </div>
 
-        <!-- Columna DER: Proyectos (carrusel) -->
+        
         <div class="flex flex-col items-center">
           <h2 class="text-lg md:text-xl font-bold mb-3 text-white/90">Proyectos</h2>
           <div class="w-full h-[260px] md:h-[300px]">

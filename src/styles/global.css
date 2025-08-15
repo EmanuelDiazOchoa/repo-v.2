@@ -1,10 +1,11 @@
 @import "tailwindcss";
 
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Sin scroll */
+  overflow: hidden; 
 }
 
 body {
@@ -25,9 +26,9 @@ body.light-mode {
 
 footer {
   padding: 2rem 1rem;
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem; 
   text-align: center;
-  background-color: #000; /* Footer negro fijo */
+  background-color: #000; 
   color: white;
 }
 
