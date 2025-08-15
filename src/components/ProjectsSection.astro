@@ -1,0 +1,131 @@
+<!-- ---
+// src/components/ProjectsSection.astro
+import ProjectCard from './ProjectCard';
+
+const projects = [
+  {
+    title: "Mis Bandas Favoritas",
+    description: "Sitio web sobre mis bandas favoritas de rock",
+    imageUrl: "./img/aplicacion-music.png",
+    projectUrl: "https://rockpulse.netlify.app/",
+    technologies: [
+      { src: "./img/astro-icon-light-gradient.webp", alt: "Astro" },
+      { src: "./img/React js.png", alt: "React Js" },
+      { src: "./img/js.png", alt: "JavaScript" },
+      { src: "./img/tailwindcss.png", alt: "Tailwind CSS" },
+      { src: "./img/swiper-logo.png", alt: "Swiper" }
+    ],
+    date: "Enero 2023"
+  },
+  {
+    title: "Argentina Mi Tierra",
+    description: "Descubre la belleza de Argentina",
+    imageUrl: "./img/viajero-solitario.png",
+    projectUrl: "https://argentinamitierra.netlify.app/",
+    technologies: [
+      { src: "./img/astro-icon-light-gradient.webp", alt: "Astro" },
+      { src: "./img/html.png", alt: "HTML" },
+      { src: "./img/Typescript-logo.png", alt: "Typescript" },
+      { src: "./img/tailwindcss.png", alt: "Tailwind CSS" },
+      { src: "./img/swiper-logo.png", alt: "Swiper" }
+    ],
+    date: "Marzo 2023"
+  },
+  {
+    title: "Salem Energias Positivas",
+    description: "Tienda de productos espirituales",
+    imageUrl: "./img/iconosalem.png",
+    projectUrl: "https://salemenergiaspositias.netlify.app/",
+    technologies: [
+      { src: "./img/React js.png", alt: "React Js" },
+      { src: "./img/js.png", alt: "JavaScript" },
+      { src: "./img/tailwindcss.png", alt: "Tailwind CSS" },
+      { src: "./img/Vite.js.png", alt: "Vitejs" },
+      { src: "./img/swiper-logo.png", alt: "Swiper" },
+      { src: "./img/firebase.png", alt: "Firebase" }
+    ],
+    date: "Mayo 2023"
+  },
+  {
+    title: "Casa de las Guitarras",
+    description: "Ecommerce de instrumentos musicales",
+    imageUrl: "./img/guitarrista.png",
+    projectUrl: "https://tiendademusica.netlify.app/",
+    technologies: [
+      { src: "./img/html.png", alt: "HTML" },
+      { src: "./img/css-3.png", alt: "CSS" },
+      { src: "./img/js.png", alt: "JavaScript" }
+    ],
+    date: "Julio 2023"
+  },
+  {
+    title: "Pasteleria Roma",
+    description: "Sitio web de pastelería artesanal",
+    imageUrl: "./img/panaderia.png",
+    projectUrl: "https://paseteleriaroma.netlify.app",
+    technologies: [
+      { src: "./img/html.png", alt: "HTML" },
+      { src: "./img/css-3.png", alt: "CSS" },
+      { src: "./img/icons8-sass-a-style-sheet-professional-grade-css-extension-language-96.png", alt: "Sass" },
+      { src: "./img/bootstrap.png", alt: "Bootstrap" }
+    ],
+    date: "Agosto 2023"
+  },
+  {
+    title: "Mi Portafolio",
+    description: "Mi página web personal",
+    imageUrl: "./img/persona-de-libre-dedicacion.png",
+    projectUrl: "https://hectoremanueldiazochoadev.netlify.app",
+    technologies: [
+      { src: "./img/html.png", alt: "HTML" },
+      { src: "./img/css-3.png", alt: "CSS" },
+      { src: "./img/js.png", alt: "JavaScript" }
+    ],
+    date: "Septiembre 2023"
+  }
+];
+---
+
+<section id="portfolio" class="portfolio-section">
+  <h2 class="section-title">Proyectos</h2>
+  
+  <div class="project-grid">
+    {projects.map(project => (
+      <ProjectCard {...project} />
+    ))}
+  </div>
+</section>
+
+<style>
+  .portfolio-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #1a2a6c);
+    color: white;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+</style> -->
