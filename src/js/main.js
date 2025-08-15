@@ -1,60 +1,36 @@
-import { gsap } from "gsap";
-
+// Aseguramos que el código solo corra en el navegador
 if (typeof window !== "undefined") {
-  document.addEventListener("DOMContentLoaded", () => {
-    const themeSwitch = document.querySelector("#theme-toggle");
-    const body = document.body;
+  const iconoSol = document.getElementById("icono-sol");
+  const iconoLuna = document.getElementById("icono-luna");
+  const body = document.body;
 
-    const setTheme = (isDark) => {
-      if (isDark) {
-        body.classList.remove("light-mode");
-        body.classList.add("dark-mode");
-        themeSwitch.checked = false;
-        localStorage.setItem("theme", "dark");
-      } else {
-        body.classList.remove("dark-mode");
-        body.classList.add("light-mode");
-        themeSwitch.checked = true;
-        localStorage.setItem("theme", "light");
-      }
-    };
+  // Estado inicial desde localStorage
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    body.classList.add("dark-mode");
+    iconoSol.classList.remove("hidden");
+    iconoLuna.classList.add("hidden");
+  } else {
+    body.classList.add("light-mode");
+    iconoSol.classList.add("hidden");
+    iconoLuna.classList.remove("hidden");
+  }
 
-    const savedTheme = localStorage.getItem("theme");
-    if (!savedTheme || savedTheme === "dark") {
-      setTheme(true);
-    } else {
-      setTheme(false);
-    }
+  // Evento: activar modo oscuro
+  iconoLuna?.addEventListener("click", () => {
+    body.classList.remove("light-mode");
+    body.classList.add("dark-mode");
+    iconoLuna.classList.add("hidden");
+    iconoSol.classList.remove("hidden");
+    localStorage.setItem("theme", "dark");
+  });
 
-    themeSwitch.addEventListener("change", (e) => {
-      setTheme(!e.target.checked);
-    });
-
-    // Efecto GSAP TextScramble
-    const scrambleText = (element, text, duration = 2) => {
-      const chars = "!<>-_\\/[]{}—=+*^?#________";
-      const splitText = text.split("");
-      const scrambled = splitText.map(() => chars[Math.floor(Math.random() * chars.length)]);
-      element.textContent = scrambled.join("");
-
-      gsap.to({}, {
-        duration,
-        onUpdate: () => {
-          const updated = splitText.map((c) => {
-            return Math.random() > 0.85 ? c : chars[Math.floor(Math.random() * chars.length)];
-          });
-          element.textContent = updated.join("");
-        },
-        onComplete: () => {
-          element.textContent = text;
-        }
-      });
-    };
-
-    const titleEl = document.getElementById("sobre-mi-title");
-    const textEl = document.getElementById("sobre-mi-text");
-
-    if (titleEl) scrambleText(titleEl, titleEl.textContent, 1.5);
-    if (textEl) scrambleText(textEl, textEl.textContent, 2.5);
+  // Evento: activar modo claro
+  iconoSol?.addEventListener("click", () => {
+    body.classList.remove("dark-mode");
+    body.classList.add("light-mode");
+    iconoSol.classList.add("hidden");
+    iconoLuna.classList.remove("hidden");
+    localStorage.setItem("theme", "light");
   });
 }

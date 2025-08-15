@@ -1,12 +1,38 @@
 ---
+import MySwiper from "../components/MySwiper.jsx";
 ---
 
-<!-- Sobre mí -->
-    <div class="flex flex-col justify-center text-center max-w-lg">
-      <h3 class="text-2xl md:text-3xl font-bold mb-4 text-white underline">Sobre Mí</h3>
-      <p id="sobre-mi-text" class="text-gray-300 leading-relaxed text-sm md:text-base">
-        Primero quiero aclarar que no soy un robot, soy un apasionado desarrollador Front End y
-        Desarrollador de Aplicaciones móviles. Mi objetivo es seguir desarrollándome profesionalmente
-        y adquirir más conocimientos.
-      </p>
-    </div>
+<section
+  class="about-section flex flex-col md:flex-row items-center justify-center gap-12 px-6 py-12"
+>
+  <!-- Columna izquierda: Foto + Botón -->
+  <div class="foto flex flex-col items-center gap-4">
+    <img
+      src="/img/foto.jpg"
+      alt="Foto"
+      class="rounded-lg w-64 h-auto shadow-lg"
+    />
+    <a
+      href="/cv.pdf"
+      class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
+    >
+      Descargar CV
+    </a>
+  </div>
+
+  <!-- Columna central: Texto -->
+  <div class="texto max-w-md text-center md:text-left">
+    <h2 class="text-3xl font-bold mb-4">Sobre Mí</h2>
+    <p class="text-lg leading-relaxed">
+      Primero quiero aclarar que no soy un robot, soy un apasionado
+      desarrollador Front End y Desarrollador de Aplicaciones móviles. Mi
+      objetivo es seguir desarrollándome profesionalmente y adquirir más
+      conocimientos.
+    </p>
+  </div>
+
+  <!-- Columna derecha: Carrusel -->
+  <div class="proyectos w-full md:w-auto">
+    <MySwiper />
+  </div>
+</section>
