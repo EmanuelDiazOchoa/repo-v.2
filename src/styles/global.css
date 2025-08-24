@@ -1,38 +1,17 @@
 @import "tailwindcss";
 
-
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* overflow: hidden;  */
 }
 
-body {
-  color: black;
-  background-color: white;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+/*
+  The body background/color is now handled by Tailwind classes
+  in BaseLayout.astro (e.g., bg-white dark:bg-black).
+*/
 
-body.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-body.light-mode {
-  background-color: white;
-  color: black;
-}
-
-footer {
-  padding: 2rem 1rem;
-  font-size: 1.125rem; 
-  text-align: center;
-  background-color: #000; 
-  color: white;
-}
-
-footer a:hover img {
-  transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
-}
+/*
+  The footer styling is now handled by Tailwind classes
+  in the Footer.astro component.
+*/

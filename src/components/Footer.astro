@@ -1,12 +1,17 @@
 ---
+const currentYear = new Date().getFullYear();
 ---
 
-<footer>
-  <p>© 2025 - Mi Portafolio | Todos los derechos reservados</p>
-  <a href="https://github.com/EmanuelDiazOchoa" target="_blank">
-    <img src="/img/github.png" alt="GitHub" class="inline-block w-6 h-6" />
-  </a>
-  <a href="https://www.linkedin.com/in/hector-emanuel-diaz-ochoa/" target="_blank">
-    <img src="/img/LinkedIn-Logo.wine.png" alt="LinkedIn" class="inline-block w-6 h-6" />
-  </a>
+<footer id="contact" class="w-full py-8 text-center text-gray-400">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex justify-center gap-8 mb-4">
+      <a href="https://github.com/EmanuelDiazOchoa" target="_blank" class="transition hover:text-white">
+        <img src="/img/github.png" alt="GitHub" class="h-10 w-10" />
+      </a>
+      <a href="https://www.linkedin.com/in/hector-emanuel-diaz-ochoa/" target="_blank" class="transition hover:text-white">
+        <img src="/img/LinkedIn-Logo.wine.png" alt="LinkedIn" class="h-10 w-10" />
+      </a>
+    </div>
+    <p>&copy; {currentYear} Hector Emanuel Diaz Ochoa. Todos los derechos reservados.</p>
+  </div>
 </footer>

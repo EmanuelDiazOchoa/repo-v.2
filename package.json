@@ -11,7 +11,7 @@
   "dependencies": {
     "@astrojs/react": "^4.3.0",
     "@tailwindcss/vite": "^4.1.11",
-    "astro": "^5.12.9",
+    "astro": "^5.13.3",
     "gsap": "^3.13.0",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.1.11"

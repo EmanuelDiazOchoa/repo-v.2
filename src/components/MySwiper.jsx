@@ -22,7 +22,7 @@ export default function MySwiper() {
   const swiperParameters = {
     modules: [A11y, Keyboard, EffectCards],
     grabCursor: true,
-    loop: true,
+    loop: false,
     effect: "cards",
     keyboard: { enabled: true },
     watchSlidesProgress: true,
