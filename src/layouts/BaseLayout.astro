@@ -1,8 +1,14 @@
 ---
+import "../styles/global.css"; // Importa Tailwind y estilos globales
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-const { title = "Mi Portfolio", description = "Portfolio de Hector Emanuel Diaz Ochoa" } = Astro.props;
+
+const {
+  title = "Mi Portfolio",
+  description = "Portfolio de Hector Emanuel Diaz Ochoa"
+} = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,24 +22,27 @@ const { title = "Mi Portfolio", description = "Portfolio de Hector Emanuel Diaz 
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/img/preview-social.jpg" />
   <meta name="author" content="Hector Emanuel Diaz Ochoa" />
-  <meta name="copyright" content="Hector Emanuel Diaz Ochoa" />
   <meta name="robots" content="index, follow" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="language" content="spanish" />
   <meta http-equiv="content-language" content="es" />
 </head>
 <body class="text-white">
-  <div class="min-h-screen w-full relative bg-black">
-    {/* Emerald Depths Background with Top Glow */}
+  <!-- Fondo global -->
+  <div class="min-h-screen w-full relative bg-black overflow-hidden">
     <div
       class="absolute inset-0 z-0"
       style="background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.25), transparent 70%), #000000;"
     ></div>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer id="contact" />
+
+    <!-- Contenido -->
+    <div class="relative z-10">
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer id="contact" />
+    </div>
   </div>
 </body>
 </html>
