@@ -14,7 +14,7 @@
 
   gsap.registerPlugin(SplitText);
 
-  // Animate title
+  
   gsap.set("#sobreMiTitulo", { opacity: 0, y: 20 });
   gsap.to("#sobreMiTitulo", {
     opacity: 1,
@@ -23,8 +23,7 @@
     ease: "power3.out"
   });
 
-  // Animate paragraph with SplitText
-  // We wait for the fonts to be ready to avoid layout shifts
+  
   document.fonts.ready.then(() => {
     gsap.set(".animate-me", {opacity: 1});
     let split = new SplitText(".animate-me", { type: "words" });
