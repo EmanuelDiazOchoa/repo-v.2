@@ -42,22 +42,24 @@
   gsap.registerPlugin(Flip, ScrollTrigger);
 
   const grid = document.querySelector("#cards-grid");
-  const cards = gsap.utils.toArray(".certificate-card");
+  const cards = gsap.utils.toArray(".certificate-card") as Element[];
 
   ScrollTrigger.create({
     trigger: grid,
     start: "top 80%",
     onEnter: () => {
-      const state = Flip.getState(cards);
-      
-      grid.classList.remove("initial-state");
+      if (grid) {
+        const state = Flip.getState(cards);
+        
+        grid.classList.remove("initial-state");
 
-      Flip.from(state, {
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        scale: true, 
-      });
+        Flip.from(state, {
+          duration: 0.8,
+          stagger: 0.1,
+          ease: "power2.out",
+          scale: true, 
+        });
+      }
     },
     once: true // Only run the animation once
   });

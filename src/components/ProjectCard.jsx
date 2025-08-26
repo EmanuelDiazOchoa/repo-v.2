@@ -25,7 +25,7 @@ export default function ProjectCard({
           </a>
         </h2>
 
-        {/* Si quieres usar description puedes agregarlo acá, si no lo quitas */}
+        
         {description && <p className="project-description">{description}</p>}
 
         <p className="tech-label">Tecnologías utilizadas:</p>

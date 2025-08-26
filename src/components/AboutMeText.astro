@@ -1,18 +1,19 @@
 ---
+
+import { TextScramble } from '../../components/motion-primitives/text-scramble';
 ---
 <div class="text-center">
-  <h2 id="sobreMiTitulo" class="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">Sobre Mí</h2>
-  <p id="sobreMiTexto" class="text-xl leading-relaxed max-w-2xl mx-auto animate-me">
+  <h2 id="sobreMiTitulo" class="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 transition-all duration-300 ease-in-out hover:scale-105 hover:from-purple-400 hover:to-pink-600 cursor-pointer">Sobre Mí</h2>
+  
+  <TextScramble as="p" className="text-xl leading-relaxed max-w-2xl mx-auto" client:visible>
     Primero quiero aclarar que no soy un robot, soy un entusiasta desarrollador Front End y Desarrollador de Aplicaciones móviles. 
     Mi objetivo es seguir desarrollándome profesionalmente y adquirir más conocimientos.
-  </p>
+  </TextScramble>
+
 </div>
 
 <script>
   import gsap from "gsap";
-  import { SplitText } from "gsap/SplitText";
-
-  gsap.registerPlugin(SplitText);
 
   
   gsap.set("#sobreMiTitulo", { opacity: 0, y: 20 });
@@ -24,17 +25,5 @@
   });
 
   
-  document.fonts.ready.then(() => {
-    gsap.set(".animate-me", {opacity: 1});
-    let split = new SplitText(".animate-me", { type: "words" });
-
-    gsap.from(split.words, {
-      duration: 0.8,
-      opacity: 0,
-      y: 20,
-      ease: "power3.out",
-      stagger: 0.05,
-    });
-  });
 </script>
 

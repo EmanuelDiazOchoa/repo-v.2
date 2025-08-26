@@ -1,0 +1,8 @@
+---
+import { TextScramble } from '../../components/motion-primitives/text-scramble';
+
+const { children, ...rest } = Astro.props;
+---
+<TextScramble {...rest}>
+  <slot />
+</TextScramble>
